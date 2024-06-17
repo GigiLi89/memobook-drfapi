@@ -67,7 +67,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-gigili89-memobookdrfapi-amx7ebpsgyq.ws-eu114.gitpod.io',
 os.environ.get('ALLOWED_HOST'),
         'localhost',
-'https://memobook-drfapi-88acd1672bdf.herokuapp.com/',
+'memobook-drfapi-88acd1672bdf.herokuapp.com',
 ]
 
 
