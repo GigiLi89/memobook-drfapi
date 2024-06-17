@@ -62,7 +62,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-gigili89-memobookdrfapi-amx7ebpsgyq.ws-eu114.gitpod.io',
 'localhost', 'https://memobook-drfapi-88acd1672bdf.herokuapp.com/']
