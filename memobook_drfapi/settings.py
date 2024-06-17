@@ -62,7 +62,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-gigili89-memobookdrfapi-amx7ebpsgyq.ws-eu114.gitpod.io',
 os.environ.get('ALLOWED_HOST'),
