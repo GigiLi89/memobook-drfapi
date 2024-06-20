@@ -70,6 +70,8 @@ ALLOWED_HOSTS = ['8000-gigili89-memobookdrfapi-amx7ebpsgyq.ws-eu114.gitpod.io',
 os.environ.get('ALLOWED_HOST'),
         'localhost',
         'https://memobook-af0ef88c7472.herokuapp.com/',
+        'https://3000-gigili89-memobook-mlgpkc9253n.ws.codeinstitute-ide.net/',
+        '8000-gigili89-memobookdrfapi-qsko9b29080.ws.codeinstitute-ide.net',
 ]
 
 
