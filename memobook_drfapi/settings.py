@@ -72,6 +72,7 @@ os.environ.get('ALLOWED_HOST'),
         'https://memobook-af0ef88c7472.herokuapp.com/',
         'https://3000-gigili89-memobook-mlgpkc9253n.ws.codeinstitute-ide.net/',
         '8000-gigili89-memobookdrfapi-qsko9b29080.ws.codeinstitute-ide.net',
+        'https://memobook-drfapi-88acd1672bdf.herokuapp.com/dj-rest-auth/user/',
 ]
 
 
