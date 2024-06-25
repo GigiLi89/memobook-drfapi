@@ -8,7 +8,7 @@ from .serializers import ChatSerializer, MessageSerializer
 
 class ChatList(generics.ListCreateAPIView):
     """
-    List all chats or create a new chat instance.
+    List chat / create new chat
     """
     queryset = Chat.objects.all()
     serializer_class = ChatSerializer
@@ -32,14 +32,14 @@ class ChatList(generics.ListCreateAPIView):
                 'detail': 'Chat with this user already exists.'})
         elif sender == receiver:
             raise ValidationError({
-                'detail': 'You cannot send a message to yourself.'})
+                'detail': 'You cant send a message to yourself.'})
 
         serializer.save(sender=sender, receiver=receiver)
 
 
 class ChatDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve, update or delete a chat instance.
+    Retrieve, update or delete a chat.
     """
     queryset = Chat.objects.all()
     serializer_class = ChatSerializer
@@ -56,7 +56,7 @@ class ChatDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class MessageList(generics.ListCreateAPIView):
     """
-    List all messages or create a new message instance.
+    List all messages or create a new message.
     """
     queryset = Chat.objects.all()
     serializer_class = MessageSerializer
@@ -74,7 +74,7 @@ class MessageList(generics.ListCreateAPIView):
                 return chat.messages.all()
             else:
                 raise ValidationError({
-                    'detail': 'You cannot access this chat.'})
+                    'detail': 'You cant access this chat.'})
         except Chat.DoesNotExist:
             raise ValidationError({'detail': 'Chat does not exist.'})
 
@@ -86,12 +86,12 @@ class MessageList(generics.ListCreateAPIView):
         if chat.sender == user or chat.receiver == user:
             serializer.save(chat=chat, sender=user)
         else:
-            raise ValidationError({'detail': 'You cannot access this chat.'})
+            raise ValidationError({'detail': 'You cant access this chat.'})
 
 
 class MessageDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve, update or delete a message instance.
+    Retrieve, update or delete a message.
     """
     queryset = Chat.objects.all()
     serializer_class = MessageSerializer
@@ -110,7 +110,7 @@ class MessageDetail(generics.RetrieveUpdateDestroyAPIView):
                 return chat.messages.filter(pk=message_id)
             else:
                 raise ValidationError({
-                    'detail': 'You cannot access this chat.'})
+                    'detail': 'You cant access this chat.'})
         except Chat.DoesNotExist:
             raise ValidationError({'detail': 'Chat does not exist.'})
 
@@ -126,7 +126,7 @@ class MessageDetail(generics.RetrieveUpdateDestroyAPIView):
                 return message
             else:
                 raise ValidationError({
-                    'detail': 'You cannot access this chat.'})
+                    'detail': 'You cant access this chat.'})
         except (Chat.DoesNotExist, Message.DoesNotExist):
             raise ValidationError({'detail': 'Chat does not exist.'})
 
@@ -143,6 +143,6 @@ class MessageDetail(generics.RetrieveUpdateDestroyAPIView):
                 message.seen = True
                 if serializer.initial_data.get('message') != message.message:
                     raise ValidationError({
-                        'detail': 'You cannot edit the message you received.'})
+                        'detail': 'You cant edit the received message.'})
                 else:
                     message.save()

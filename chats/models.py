@@ -38,7 +38,7 @@ class Message(models.Model):
         ordering = ['created_at']
 
     def __str__(self):
-        return f'{self.sender} has sent a message to {self.chat.receiver}.'
+        return f'{self.sender} sent a message to {self.chat.receiver}.'
 
     def get_receiver(self):
         return self.chat.receiver
