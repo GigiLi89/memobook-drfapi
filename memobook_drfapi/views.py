@@ -8,9 +8,20 @@ from .settings import (
 
 @api_view()
 def root_route(request):
-    return Response({
-        "message": "Welcome to my memobook drf API!"
-    })
+    response_data = {
+        'message': 'Welcome to the API.',
+        'endpoints': {
+            'for profiles': '/profiles/',
+            'for posts': '/posts/',
+            'for comments': '/comments/',
+            'for likes': '/likes/',
+            'for friends': '/friends/',
+            'for chats': '/chats/',
+            'to access specific chat messages': '/chats/<chat_id>/messages/',
+            'for admins to access the admin panel': '/admin/',
+        }
+    }
+    return Response(response_data)
 
 
 # dj-rest-auth logout view fix
