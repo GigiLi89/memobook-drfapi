@@ -115,4 +115,6 @@ This project is secured by using Django REST permissions and React redirect hook
 
 Secret key, Database url and cloudinary url are stored safely in env.py and config vars (Heroku). This will not show in Github repository. 
 
-
+# Testing
+The testing was made and documented in a seperate file.
+Please find the testing documentation here: 
