@@ -26,6 +26,12 @@ The difference between the desktop version compared to the tablet and mobile ver
 
 ---
 
+# ERD (created in Lucidchart)
+
+![ERD](assets_md/memo_erd.png)
+
+---
+
 # Process of building the workspace
 
 After creating a new repository with the new CI template I opened the workspace in VS code through Gitpod. Most of the project was not made with Gitpod Enterprise since I had major issues moving there. After talking to both Student Care and 3 different tutors I was told to use the old Gitpod and wait for more information until the issues were fixed. 
