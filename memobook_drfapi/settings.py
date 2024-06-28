@@ -102,8 +102,7 @@ INSTALLED_APPS = [
     'comments',
     'likes',
     'followers',
-    'chats',
-    'messages'
+    'chats'
 ]
 SITE_ID = 1
 MIDDLEWARE = [
