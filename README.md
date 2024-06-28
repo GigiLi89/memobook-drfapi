@@ -34,6 +34,8 @@ The difference between the desktop version compared to the tablet and mobile ver
 
 # Process of building the workspace
 
+![homepage](assets_md/home_m.png)
+
 After creating a new repository with the new CI template I opened the workspace in VS code through Gitpod. Most of the project was not made with Gitpod Enterprise since I had major issues moving there. After talking to both Student Care and 3 different tutors I was told to use the old Gitpod and wait for more information until the issues were fixed. 
 
 I installed Django and started my DRF API project. I also started setting up Cloudinary, PostgreSQL and Heroku for:
@@ -48,6 +50,9 @@ When starting the project I first created the DRF API and the necessary apps for
 # Features
 
 ## Header / Navigation Bar
+
+![nav](assets_md/navbar_m.png)
+![navloggedout](assets_md/navloggedout_m.png)
 
 In the header / navigation bar we have the logo in the upper left corner. The logo is also a link that will link back to the Home page. The logo will be there no matter if the user is logged in or not. 
 
@@ -67,6 +72,8 @@ If user is logged in, user will have:
 ## Home page
 
 On the Home page the structure will look different depending on the device the user is on. 
+
+![homepage](assets_md/home_m.png)
 
 ### Desktop
 A searchbar is just under the header/navigation bar. The serachbar can be used to search for posts or posts made by a specific user. Under the search bar we have the post feeds. Next to the search bar and post feed we have a column with the profiles that are most popular/have most followers. 
