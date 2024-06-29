@@ -25,11 +25,13 @@ MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [(
-        'rest_framework.authentication.SessionAuthentication'
-        if 'DEV' in os.environ
-        else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
-    )],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        (
+            'rest_framework.authentication.SessionAuthentication'
+            if 'DEV' in os.environ
+            else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
+        )
+    ],
     'DEFAULT_PAGINATION_CLASS':
         'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
@@ -47,14 +49,12 @@ JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
 REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'memobook_drfapi.serializers.CurrentUserSerializer'
+    'USER_DETAILS_SERIALIZER':
+        'memobook_drfapi.serializers.CurrentUserSerializer'
 }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -65,16 +65,16 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-gigili89-memobookdrfapi-amx7ebpsgyq.ws-eu114.gitpod.io',
-'memobook-drfapi-88acd1672bdf.herokuapp.com',
-os.environ.get('ALLOWED_HOST'),
-        'localhost',
-        'https://memobook-af0ef88c7472.herokuapp.com/',
-        'https://3000-gigili89-memobook-mlgpkc9253n.ws.codeinstitute-ide.net/',
-        '8000-gigili89-memobookdrfapi-qsko9b29080.ws.codeinstitute-ide.net',
-        'https://memobook-drfapi-88acd1672bdf.herokuapp.com/dj-rest-auth/user/',
+ALLOWED_HOSTS = [
+    '8000-gigili89-memobookdrfapi-amx7ebpsgyq.ws-eu114.gitpod.io',
+    'memobook-drfapi-88acd1672bdf.herokuapp.com',
+    os.environ.get('ALLOWED_HOST'),
+    'localhost',
+    'https://memobook-af0ef88c7472.herokuapp.com/',
+    'https://3000-gigili89-memobook-mlgpkc9253n.ws.codeinstitute-ide.net/',
+    '8000-gigili89-memobookdrfapi-qsko9b29080.ws.codeinstitute-ide.net',
+    'https://memobook-drfapi-88acd1672bdf.herokuapp.com/dj-rest-auth/user/',
 ]
-
 
 # Application definition
 
@@ -105,6 +105,7 @@ INSTALLED_APPS = [
     'chats'
 ]
 SITE_ID = 1
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -119,10 +120,11 @@ MIDDLEWARE = [
 if "CLIENT_ORIGIN" in os.environ:
     CORS_ALLOWED_ORIGINS = [os.environ.get("CLIENT_ORIGIN")]
 
-CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.codeinstitute-ide\.net$",]
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.codeinstitute-ide\.net$",
+]
 
 CORS_ALLOW_CREDENTIALS = True
-
 
 ROOT_URLCONF = 'memobook_drfapi.urls'
 
@@ -143,7 +145,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'memobook_drfapi.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -172,19 +173,22 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -198,7 +202,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
