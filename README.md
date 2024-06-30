@@ -97,6 +97,8 @@ Secret key, Database url and cloudinary url are stored safely in env.py and conf
 - DRF Tutorial: https://www.youtube.com/watch?v=t-uAgI-AUxc
 - Python documentation: https://docs.python.org/3/
 - Python Turorial: https://www.youtube.com/watch?v=_uQrJ0TkZlc
+- DRF chat tutorial: https://medium.com/@Evenword/how-to-create-a-chat-bot-using-django-drf-579a7f0cff07 + https://www.youtube.com/watch?v=Rwa0UpMt1DA + https://www.youtube.com/watch?v=MPnNdpzJHoQ
+
 
 ### Code
 - Code Institute DRF Tutorial Project, used through as a basis for the creation of this API
