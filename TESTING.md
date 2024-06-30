@@ -1,3 +1,14 @@
+Link to the frontend GitHub repository: [Frontend repo](https://github.com/GigiLi89/memobook)
+Link to deployed Heroku app: [Heroku app](https://memobook-af0ef88c7472.herokuapp.com/)
+
+Please find the README.md file in a seperate document here: [README.md](README.md)
+
+---
+
+# Testing
+
+Throughout the development of the API, multiple manual testings were made to verify the functionality of the features. Below is the final manual testing of everything before submission:
+
 ## Manual Testing
 
 | Testing endpoints |      |
@@ -48,3 +59,7 @@ Fun story: When testing the test above I recieved a 403 error. I tried for almos
 No major issues, only a few missing blanks at the end which is resolved now. 
 
 ![CI Linter](assets_md/ci_linter_m.png)
+
+---
+
+Please find the README.md file in a seperate document here: [README.md](README.md)
