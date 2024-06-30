@@ -107,6 +107,12 @@ URL: https://github.com/Code-Institute-Solutions/drf-api
 
 # Deployment
 
+Make sure you have your requirements.txt file saved:
+In the terminal, write command: pip3 freeze > requirements.txt
+
+requirements.txt is now updated so don't forget to push it to Github. 
+Also, don't forget your Procfile, the Procfile is needed for deploying your project to Heroku. This is to specify the commands that are run by your application's dynos. It basically tells the platform how to start different parts of your application. 
+
 ## Forking GitHub Repository
 1) Click on the projects repository on GitHub
 2) In the upper right corner, in the menu, click on the Fork button
@@ -120,7 +126,7 @@ URL: https://github.com/Code-Institute-Solutions/drf-api
 5) Press Enter to create a local clone
 
 ## Deploying to Heroku
-(Make sure everything is pushed to GirHub. If changes are made after deployment, don't forget to redeploy it on Heroku)
+(Make sure everything is pushed to GitHub. If changes are made after deployment, don't forget to redeploy it on Heroku)
 
 ### Create database with CI
 1) Go to the "PostgreSQL from Code Institute" site provided by Code Insitute.
@@ -145,7 +151,13 @@ Deploy tab:
 
 Connect Heroku account to GitHub repository:
 1) Click the Deploy tab at the top of the page
-2) Enter GitHuv repository name and click the Search button
+2) Enter GitHub repository name and click the Search button
 3) Choose the correct repository and click the Connect button
 4) At the bottom of the page on Manual Deploy, click Deploy Branch button
 5) You can follow the building log and when the log says that the build is successful you can click on View at the bottom of the page or Open app at the top of the page to see the deployed site. 
+
+---
+
+# Testing
+
+Please find the TESTING.MD document in a seperate document here: [TESTING.md](TESTING.md)
