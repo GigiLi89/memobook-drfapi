@@ -1,5 +1,6 @@
 Link to the frontend GitHub repository: [Frontend repo](https://github.com/GigiLi89/memobook)
-Link to deployed Heroku app: [Heroku app](https://memobook-af0ef88c7472.herokuapp.com/)
+Link to deployed frontend Heroku app: [Heroku frontend](https://memobook-af0ef88c7472.herokuapp.com/)
+Link to deployed backend Heroku app: [Heroku backend](https://memobook-drfapi-88acd1672bdf.herokuapp.com/)
 
 Please find the README.md file in a seperate document here: [README.md](README.md)
 
