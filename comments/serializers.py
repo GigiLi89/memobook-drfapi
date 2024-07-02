@@ -1,3 +1,4 @@
+# Code from Code Institutes walkthrough project and study material
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from rest_framework import serializers
 from .models import Comment

@@ -1,3 +1,4 @@
+# Code from Code Institutes walkthrough project and study material
 from django.db import IntegrityError
 from rest_framework import serializers
 from .models import Follower

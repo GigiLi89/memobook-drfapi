@@ -1,3 +1,4 @@
+# Code from Code Institutes walkthrough project and study material
 from rest_framework import serializers
 from .models import Profile
 from followers.models import Follower

@@ -1,3 +1,4 @@
+# Code partly from Code Institutes walkthrough project and study material
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .settings import (
@@ -15,7 +16,7 @@ def root_route(request):
             'for posts': '/posts/',
             'for comments': '/comments/',
             'for likes': '/likes/',
-            'for friends': '/friends/',
+            'for followers': '/followers/',
             'for chats': '/chats/',
             'to access specific chat messages': '/chats/<chat_id>/messages/',
             'for admins to access the admin panel': '/admin/',

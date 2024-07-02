@@ -1,3 +1,4 @@
+# Code from Code Institutes walkthrough project and study material
 from rest_framework import generics, permissions
 from django_filters.rest_framework import DjangoFilterBackend
 from memobook_drfapi.permissions import IsOwnerOrReadOnly

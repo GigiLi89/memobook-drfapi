@@ -1,3 +1,4 @@
+# Code from Code Institutes walkthrough project and study material
 from rest_framework import generics, permissions
 from memobook_drfapi.permissions import IsOwnerOrReadOnly
 from .models import Follower
